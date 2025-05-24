@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import API_BASE_URL from '../api'; // Import the API base URL
 
 const Calculator = () => {
     const [num1, setNum1] = useState('');
@@ -7,7 +8,7 @@ const Calculator = () => {
     const [operation, setOperation] = useState('');
 
     const handleCalculation = async () => {
-        const response = await fetch(`https://tight-internally-moccasin.ngrok-free.app/api/calculate`, {
+            const response = await fetch(`${API_BASE_URL}/calculate`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
