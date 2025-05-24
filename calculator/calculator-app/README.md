@@ -100,7 +100,9 @@ npm start
 
 ---
 
-## 🖥️ Starting nginx Server
+## 🖥️ Useful Commands
+
+### nginx Server
 
 If you use nginx for reverse proxy or static serving, here are some useful commands:
 
@@ -116,6 +118,21 @@ start nginx
 
 # Reload configuration
 nginx -s reload
+```
+
+### PM2 Process Manager
+
+For managing your Node.js backend with PM2:
+
+```sh
+# Start the app with 2 instances and a custom name
+pm2 start app.js -i 2 --name express-app-calculator
+
+# Stop all PM2 processes
+pm2 kill
+
+# Check PM2 process status
+pm2 status
 ```
 
 ---
