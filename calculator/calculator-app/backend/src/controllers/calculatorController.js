@@ -30,6 +30,15 @@ class CalculatorController {
 
         res.json({ result });
     }
+
+    add(req, res) {
+        const { a, b } = req.body;
+        if (typeof a !== 'number' || typeof b !== 'number') {
+            return res.status(400).json({ error: 'Invalid input' });
+        }
+        const result = a + b;
+        res.json({ result });
+    }
 }
 
 module.exports = CalculatorController;
